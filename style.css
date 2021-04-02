@@ -7,6 +7,10 @@
   color: #3691ff;
 }
 
+.className {
+  color: #ff6480;
+}
+
 .string {
   color: #f9c859;
 }
@@ -23,7 +27,7 @@
   color: #7a82da;
 }
 
-.this {
-  color: #ff6480;
+.property {
+  color: #ce9887;
 }
 /*# sourceMappingURL=style.css.map */

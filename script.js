@@ -17,11 +17,19 @@ code = code.replace(/"　/g, `"</span>　`);
 // 数字
 code = code.replace(/　[0-9]*;/g, `<span class='number'>$&</span>`);
 // this
-code = code.replace(/this*/g, `<span class='this'>$&</span>`);
+code = code.replace(/this*/g, `<span class='property'>$&</span>`);
 // code = code.replace(/this.[0-9a-zA-Z]*/g, `<span class='name'>$&</span>`);
 // メソッド
 code = code.replace(/　[0-9a-zA-Z]*\(\)/g, `<span class='methods'>$&</span>`);
-// class
+// クラス return
 code = code.replace(/class　/g, `<span class='class'>class　</span>`);
+// クラス名
+code = code.replace(/RuiOkazaki/g, `<span class='className'>$&</span>`);
+code = code.replace(/return　/g, `<span class='className'>return　</span>`);
+// () {} =
+code = code.replace(
+  /\(|\)|\[|\]|　\=|\{|\}/g,
+  `<span class='brackets'>$&</span>`
+);
 
 change.innerHTML = code;
