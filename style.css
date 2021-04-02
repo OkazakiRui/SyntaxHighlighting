@@ -1,0 +1,29 @@
+* {
+  background-color: #14121c;
+  color: #f2f2f2;
+}
+
+.class {
+  color: #3691ff;
+}
+
+.string {
+  color: #f9c859;
+}
+
+.number {
+  color: #ff78f8;
+}
+
+.methods {
+  color: #3fc56b;
+}
+
+.brackets {
+  color: #7a82da;
+}
+
+.this {
+  color: #ff6480;
+}
+/*# sourceMappingURL=style.css.map */
