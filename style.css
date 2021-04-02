@@ -1,6 +1,7 @@
 * {
   background-color: #14121c;
   color: #f2f2f2;
+  font-family: "Roboto Mono", monospace;
 }
 
 .class {
@@ -29,5 +30,52 @@
 
 .property {
   color: #ce9887;
+}
+
+pre {
+  display: none;
+}
+
+p {
+  margin: 0;
+  padding-left: 50px;
+  position: relative;
+}
+
+p:hover {
+  background-color: #1a1526;
+}
+
+p::before {
+  content: attr(data-value);
+  position: absolute;
+  display: block;
+  width: 20px;
+  left: 10px;
+  font-size: 14px;
+  text-align: end;
+}
+
+body {
+  height: 100vh;
+}
+
+#change {
+  border: 1px solid white;
+  padding: 20px 10px;
+  margin-top: 100px;
+  position: relative;
+}
+
+#change::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  left: 50px;
+  top: 0;
+  z-index: 10;
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */

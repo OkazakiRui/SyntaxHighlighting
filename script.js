@@ -2,7 +2,9 @@ let code = document.getElementById("code").innerHTML;
 let change = document.getElementById("change");
 console.log(code);
 code = code.replace(/ /g, `　`);
-code = code.replace(/\r?\n/g, `<br>`);
+// code = code.replace(/\r?\n/g, `<br>`);
+// pタグにする
+code = code.replace(/.*\r?\n/g, `<p>$&</p>`);
 code = code.replace(/　"/g, `　<span class='string'>"`);
 code = code.replace(/",/g, `"</span>,`);
 code = code.replace(/";/g, `"</span>;`);
@@ -33,3 +35,8 @@ code = code.replace(
 );
 
 change.innerHTML = code;
+
+const p = document.querySelectorAll("p");
+p.forEach((element, index) => {
+  element.setAttribute("data-value", index + 1);
+});
