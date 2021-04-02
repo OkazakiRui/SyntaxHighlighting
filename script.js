@@ -21,5 +21,7 @@ code = code.replace(/this*/g, `<span class='this'>$&</span>`);
 // code = code.replace(/this.[0-9a-zA-Z]*/g, `<span class='name'>$&</span>`);
 // メソッド
 code = code.replace(/　[0-9a-zA-Z]*\(\)/g, `<span class='methods'>$&</span>`);
+// class
+code = code.replace(/class　/g, `<span class='class'>class　</span>`);
 
 change.innerHTML = code;
